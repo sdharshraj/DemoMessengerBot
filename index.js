@@ -15,12 +15,12 @@ app.use(bodyParser.json())
 
 // index
 app.get('/', function (req, res) {
-	res.send('60952668')
+	res.send('Hello there')
 })
 
 // for facebook verification
 app.get('/webhook/', function (req, res) {
-	if (req.query['hub.verify_token'] === '123') {
+	if (req.query['hub.verify_token'] === 'harshraj') {
 		res.send(req.query['hub.challenge'])
 	}
 	res.send('Error, wrong token')
