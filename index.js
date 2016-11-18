@@ -84,15 +84,16 @@ function sendGenericMessage(sender) {
 					"title": "First card",
 					"subtitle": "Element #1 of an hscroll",
 					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-					"buttons": [{
-						"type": "web_url",
-						"url": "https://www.messenger.com",
-						"title": "web url"
-					}, {
-						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for first element in a generic bubble",
-					}],
+					 "buttons":[
+						{
+							"type":"web_url",
+							"url":"https://ilovemycityapp.herokuapp.com/test",
+							"title":"Select Criteria",
+							"webview_height_ratio": "full",
+							"messenger_extensions": true,  
+							"fallback_url": "https://petersfancyapparel.com/fallback"
+						}
+					],
 				}, {
 					"title": "Second card",
 					"subtitle": "Element #2 of an hscroll",
