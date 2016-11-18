@@ -52,7 +52,7 @@ app.post('/webhook/', function (req, res) {
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.PAGE_ACCESS_TOKEN
-const token = "EAADFuzwmOgoBAEZBfSZAqyB9JJZBLjFqcLfUylhuUmVvxKKUF3ugIew3lQ16IjGJ0gkVrn2I8j2NCUmDNdylHRmQv2F3SSBpyXAQVZClZCIwBJJTqeHeBifOzghh83a2ohzCXlkMJheofiQnX1EiARZAAC3Jx5SiD6JglOmEQE7gZDZD";
+const token = "EAADFuzwmOgoBAEZBfSZAqyB9JJZBLjFqcLfUylhuUmVvxKKUF3ugIew3lQ16IjGJ0gkVrn2I8j2NCUmDNdylHRmQv2F3SSBpyXAQVZClZCIwBJJTqeHeBifOzghh83a2ohzCXlkMJheofiQnX1EiARZAAC3Jx5SiD6JglOmEQE7gZDZD"
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
@@ -84,16 +84,15 @@ function sendGenericMessage(sender) {
 					"title": "First card",
 					"subtitle": "Element #1 of an hscroll",
 					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-					 "buttons":[
-						{
-							"type":"web_url",
-							"url":"https://ilovemycityapp.herokuapp.com/test",
-							"title":"Just Testing",
-							"webview_height_ratio": "full",
-							"messenger_extensions": true,  
-							"fallback_url": "https://petersfancyapparel.com/fallback"
-						}
-					],
+					"buttons": [{
+						"type": "web_url",
+						"url": "https://www.messenger.com",
+						"title": "web url"
+					}, {
+						"type": "postback",
+						"title": "Postback",
+						"payload": "Payload for first element in a generic bubble",
+					}],
 				}, {
 					"title": "Second card",
 					"subtitle": "Element #2 of an hscroll",
