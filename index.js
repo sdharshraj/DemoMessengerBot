@@ -88,7 +88,7 @@ function sendGenericMessage(sender) {
 						{
 							"type":"web_url",
 							"url":"https://ilovemycityapp.herokuapp.com/test",
-							"title":"Select Criteria",
+							"title":"Just Testing",
 							"webview_height_ratio": "full",
 							"messenger_extensions": true,  
 							"fallback_url": "https://petersfancyapparel.com/fallback"
