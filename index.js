@@ -82,35 +82,23 @@ function sendGenericMessage(sender) {
 	let messageData = {
 		"attachment": {
 			"type": "template",
-			"payload": {
-				"template_type": "generic",
-				"elements": [{
-					"title": "First card",
-					"subtitle": "Element #1 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-					"buttons": [{
-						"type": "web_url",
-						"url": "https://www.messenger.com",
-						"title": "web url"
-					}, {
-						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for first element in a generic bubble",
-					}],
-				}, {
-					"title": "Second card",
-					"subtitle": "Element #2 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-					"buttons":[
-					{
-						"type":"web_url",
-						"url":"http://example.com/",
-						"title":"Example Domain",
-						"webview_height_ratio": "full"
-					}
-				],
-				}]
-			}
+			payload: {
+          template_type: "button",
+          text: "This is test text",
+          buttons:[{
+            type: "web_url",
+            url: "https://www.oculus.com/en-us/rift/",
+            title: "Open Web URL"
+          }, {
+            type: "postback",
+            title: "Trigger Postback",
+            payload: "DEVELOPER_DEFINED_PAYLOAD"
+          }, {
+            type: "phone_number",
+            title: "Call Phone Number",
+            payload: "+16505551234"
+          }]
+        }
 		}
 	}
 	request({
