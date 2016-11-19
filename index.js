@@ -12,14 +12,14 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 // parse application/json
 app.use(bodyParser.json())
-
+app.set('view engine', 'ejs');
 // index
 app.get('/', function (req, res) {
 	res.send('Hello there')
 })
 
-app.get('/test', function(req,res){
-	res.render('./test.html');
+app.use('/test', function(req,res){
+	res.render('./test');
 })
 
 // for facebook verification
