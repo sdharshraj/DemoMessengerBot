@@ -18,6 +18,10 @@ app.get('/', function (req, res) {
 	res.send('Hello there')
 })
 
+app.get('/test', function(req,res){
+	res.render('./test.html');
+})
+
 // for facebook verification
 app.get('/webhook/', function (req, res) {
 	if (req.query['hub.verify_token'] === 'harshraj') {
@@ -97,11 +101,14 @@ function sendGenericMessage(sender) {
 					"title": "Second card",
 					"subtitle": "Element #2 of an hscroll",
 					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-					"buttons": [{
-						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for second element in a generic bubble",
-					}],
+					"buttons":[
+					{
+						"type":"web_url",
+						"url":"https://petersfancyapparel.com/criteria_selector",
+						"title":"Select Criteria",
+						"webview_height_ratio": "compact"
+					}
+				],
 				}]
 			}
 		}
