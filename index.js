@@ -106,7 +106,7 @@ function sendGenericMessage(sender) {
 						"type":"web_url",
 						"url":"http://example.com/",
 						"title":"Example Domain",
-						"webview_height_ratio": "compact"
+						"webview_height_ratio": "full"
 					}
 				],
 				}]
