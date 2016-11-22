@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 app.set('view engine', 'ejs');
 // index
 app.get('/', function (req, res) {
-	res.send('Hello there')
+	res.send('Hi folks')
 })
 
 app.use('/test', function(req,res){
