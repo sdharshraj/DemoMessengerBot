@@ -77,7 +77,6 @@ function sendTextMessage(sender, text) {
 		}
 	})
 }
-
 function sendGenericMessage(sender) {
 	let messageData = {
 		attachment: {
@@ -132,7 +131,6 @@ function sendGenericMessage(sender) {
 		}
 	})
 }
-
 // spin spin sugar
 app.listen(app.get('port'), function() {
 	console.log('running on port', app.get('port'))
