@@ -4,7 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
-
+const SERVER_URL = "https://hrmessengerbot.herokuapp.com/";
 app.set('port', (process.env.PORT || 5000))
 
 // parse application/x-www-form-urlencoded
@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 app.use('/test', function(req,res){
 	res.render('./test');
 })
-
+app.use(express.static('public'));
 // for facebook verification
 app.get('/webhook/', function (req, res) {
 	if (req.query['hub.verify_token'] === 'harshraj') {
@@ -52,7 +52,6 @@ app.post('/webhook/', function (req, res) {
 	}
 	res.sendStatus(200)
 })
-
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.PAGE_ACCESS_TOKEN
