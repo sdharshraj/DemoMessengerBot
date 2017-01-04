@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
+    "botbuilder": "^3.4.4",
     "express": "^4.13.4",
-    "request": "^2.71.0"
+    "request": "^2.71.0",
+    "restify": "^4.3.0"
   }
 }
