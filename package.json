@@ -10,11 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
-<<<<<<< HEAD
     "botbuilder": "^3.4.4",
-=======
     "ejs": "^2.5.2",
->>>>>>> b5d9cda225a8fd257b122e38cdd940d2ef5639be
     "express": "^4.13.4",
     "request": "^2.71.0",
     "restify": "^4.3.0"
