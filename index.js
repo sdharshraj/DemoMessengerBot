@@ -33,9 +33,6 @@ bot.use(builder.Middleware.dialogVersion({ version: 1.0, resetCommand: /^reset/i
 bot.endConversationAction('goodbye', 'Goodbye :)', { matches: /^goodbye/i });
 bot.beginDialogAction('help', '/help', { matches: /^help/i });
 
-//=========================================================
-// Bots Dialogs
-//=========================================================
 
 bot.dialog('/', [
     function (session) {
